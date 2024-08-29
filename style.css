@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    font-family: cursive;
+    font-family: sans-serif;
     box-sizing: border-box;
     display: flex;
     flex-direction:column;
@@ -8,11 +8,11 @@ body{
     min-height: 100vh;
 }
 
-body, div, grid {
-    background-color: rgb(243, 240, 240);
+body, div {
+    background-color: #fdf5db;
 }
 header, nav, main,  footer{
-    background-color: #fff;
+    background-color: #fdf5db;
     box-sizing: border-box;
     padding: 40px;
 }
@@ -27,7 +27,14 @@ header, nav, main,  footer{
 .header__logo-container{
     width: 200px;
     height: auto;
-    color: #be5f5f;
+    color: #F2D4D6;
+}
+
+header {
+    width: 100%;
+    background-color:#f4e27b;
+    color: rgb(146, 72, 72);
+    padding: 20px;
 }
 
 ul{
@@ -35,7 +42,7 @@ ul{
     font-size: 20px;
     line-height: 40px;
     font-weight: 700;
-    color: grey;
+    color: rgb(146, 72, 72);
 }
 
 .grid{
@@ -50,6 +57,30 @@ ul{
     margin: auto;
     padding: 10px;
 }
+/*botones*/
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Crea 3 columnas iguales */
+    grid-gap: 10px; /* Espacio entre los botones */
+  }
+  
+  .btn {
+    padding: 10px;
+    background-color: #90c2c8;
+    color: #fdf5db;
+    border: none;
+    cursor: pointer;
+  }
+/*botones*/
+
+/* grid*/
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Crea 3 columnas iguales */
+    gap: 10px; /* Espacio entre las imágenes */
+  }
+  
+/* grid*/
 
 .pictures__container {
     display:grid;
@@ -74,29 +105,12 @@ ul{
     align-items: center;
 }
 
+.imagen:hover {
+    transform: scale(1.1);
+}
+
 img{
     width: 100%;
-}
-
-.button__back-container {
-    padding: 10px;
-    border-radius: 15px;
-    background-color: #FFF;
-    text-align: start;
-}
-
-.button__forward-container {
-    padding: 10px;
-    border-radius: 15px;
-    background-color: #FFF;
-    text-align: end;
-
-}
-header {
-    width: 100%;
-    background-color:rgb(10, 10, 14);
-    color: #fff;
-    padding: 20px;
 }
 
 nav{
@@ -160,9 +174,9 @@ nav, aside{
 }
 
 footer{
-    background-color: rgb(12, 12, 12);
+    background-color: rgb(243, 231, 229);
     width: 100%;
-    color: #fff;
+    color: #393838;
     font-size: 20px;
     padding: 20px;
     text-align: end;

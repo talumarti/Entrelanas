@@ -12,11 +12,43 @@ body, div {
     background-color: #f1eeeefa;
 }
 
-header, nav, main,  footer{
+header, nav, main, aside, footer{
     background-color: #f1eeeefa;
     box-sizing: border-box;
     padding: 40px;
 }
+
+.grid{
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: minmax(150px,0.5fr) minmax(350px,2fr) minmax(150px,0.5fr);
+    grid-template-rows: 1fr;
+    grid-auto-flow: dense;
+    grid-template-areas:
+    "nav main aside";
+    gap: 10px;
+    margin: auto;
+    padding: 10px;
+}
+
+nav{
+    grid-area: nav;
+    text-align: end;
+}
+
+main{
+    grid-area: main;
+}
+
+aside{
+    grid-area: aside;
+    padding: 10px;
+}
+
+nav, aside{
+    position: static;
+    height: auto;
+    }
 
 /*-------------- HEADER SECTION --------------*/
 
@@ -86,7 +118,11 @@ header, nav, main,  footer{
     text-decoration: none;
 }
 
-/*-------------- HEADER QUERIES --------------*/
+h2{
+    text-align: center;
+}
+
+/*-------------- HEADER QUERIES START--------------*/
 
 @container header (min-width: 600px) {
     .header__nav {
@@ -110,7 +146,7 @@ header, nav, main,  footer{
     }
 }
 
-/*-------------- HEADER END --------------*/
+/*-------------- HEADER QUERIES END --------------*/
 
 /*-------------- SIDE NAV START --------------*/
 header {
@@ -138,122 +174,165 @@ ul{
     line-height: 40px;
     font-weight: 600;
 }
+
 /*-------------- SIDE NAV END --------------*/
 
-.grid{
-    flex-grow: 1;
+/*-------------- MAIN START --------------*/
+
+.cards {
     display: grid;
-    grid-template-columns: minmax(150px,0.5fr) minmax(350px,2fr) minmax(150px,0.5fr);
-    grid-template-rows: 1fr;
-    grid-auto-flow: dense;
-    grid-template-areas:
-    "nav main aside";
-    gap: 10px;
-    margin: auto;
-    padding: 10px;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
 }
-/*botones*/
-.grid-container {
+    
+  .card {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Crea 3 columnas iguales */
-    grid-gap: 10px; /* Espacio entre los botones */
-  }
-  
-  .btn {
-    padding: 10px;
-    background-color: #8bb8bc;
-    color: #fdf5db;
-    border: none;
-    cursor: pointer;
-    border-radius: 10px;
-  }
-/*botones*/
-
-/* grid*/
-.galeria {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Crea 3 columnas iguales */
-    gap: 40px; /* Espacio entre las imágenes */
-    text-align: center;
-  }
-/* grid*/
-
-.pictures__container {
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 40px;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    gap: 5px;
-    background-color: rgb(237, 235, 235);
-    padding: 10px;
-}
-
-.image__container{
-    background-color: #fff;
-    padding: 10px;
-    text-align: center;
-    border-radius: 15px;
-    margin-top: 40px;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-}
-
-.imagen:hover {
-    transform: scale(1.1);
-}
-
-p, span{
-font-size: large;
-}
-
-img{
-    width: 100%;
-    border-radius: 10px;
-}
-
-nav{
-    grid-area: nav;
-    text-align: end;
-}
-
-main{
-    grid-area: main;
-}
-
-aside{
-    grid-area: aside;
-    padding: 10px;
-}
-
-.side__nav, aside{
-    position: sticky;
-    top: 0;
-    height: 100vh;
+    grid-template-rows: minmax(350px,1fr) 100px;
+    grid-template-columns: minmax(350px,1fr);
+    border-radius: 16px;
+    padding: 20px;
     }
+  
+
+  .picture1 {
+    background-image: url(https://media.istockphoto.com/id/2148513876/es/foto/un-juguete-amigurumi-de-ganchillo-de-un-lindo-le%C3%B3n-de-peluche.jpg?s=2048x2048&w=is&k=20&c=aZNfukqg7lZrsOjblfvYbNsREBOf3YzD5b3Y8VCJGD8=);
+    background-position: center;
+    /*background-repeat: no-repeat;*/
+    background-size: cover;
+    border: 2px solid;
+    color: pink;
+    border-radius: 16px;
+  }
+
+  .picture2 {
+    background-image: url(https://media.istockphoto.com/id/1587487552/es/foto/juguete-de-punto-hecho-a-mano-imagen-lgbtq-de-amigurumi-animal.jpg?s=2048x2048&w=is&k=20&c=z5qDXe2SjOGGY8gtZOtWYe6bFqX_5d6QfkGI0Tl1wJo=);
+    background-repeat: repeat-x;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 80%;
+    border: 2px solid;
+    border-radius: 16px;
+    color: pink;
+  }
+
+  .picture3{
+  background-image: url(https://media.istockphoto.com/id/1745863841/es/foto/mu%C3%B1eca-amigurumi-hecha-a-mano.jpg?s=612x612&w=is&k=20&c=t5o7jtYtGsyCqZQOftnYnAYWV_AmGxkC5TJyT3YfN-c=);
+  background-repeat: repeat-x;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px solid;
+  border-radius: 16px;
+  color: pink;
+}
+
+.picture4{
+    background-image: url(https://disenosparabordar.com/wp-content/uploads/2020/07/Amigurumis.jpeg);
+    background-repeat: repeat-x;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid;
+    border-radius: 16px;
+    color: pink;
+}
+ 
+
+.picture5{
+    background-image: url(https://media.istockphoto.com/id/2153175558/es/foto/pretty-cute-kitten-relaxing-on-the-bed-with-red-heart-tabby-cat-funny-mischief-pets-valentines.jpg?s=2048x2048&w=is&k=20&c=zAKz0bPTXX2Qj7q1Vw1uYbcCiDdpbENOEUo_Ufu0axk=);
+    background-repeat: repeat-x;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid;
+    border-radius: 16px;
+    color: pink;
+}
+
+.picture6{
+    background-image: url(https://littlebearcrochets.com/cdn/shop/files/giraffe-crochet-amigurumi-pattern-09-570_c099e22e-b4db-4105-ae2f-200f378090c6.jpg?v=1714895135&width=493);
+    background-repeat: repeat-x;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid;
+    border-radius: 16px;
+    color: pink;
+}
 
 .block {
-    background-color: #333;
+    background-color: #444;
     color: #FFF;
-    margin: 20px 0;
-    margin-bottom: 30px;
+    margin: 50px 0;
     text-align: center;
-    padding: 8px;
+    padding: 20px;
     border-radius: 10px;
 }
 
 .form__input-newsletter{
 text-align: center;
-margin: auto;
-background-color: #333;
-padding: 10px 9px;
+margin: 20px;
+background-color: #444;
+padding: 20px 9px;
 font-size: 1.5em;
 }
 
+p{
+    font-size: 1.5em;
+    text-align: justify;
+    }
+    
+span{
+    font-size: 1.5em;
+    text-align: center;
+}
+/*-------------- MAIN END --------------*/
 
-/*-------------- formulario start  --------------*/
+/*-------------- QUERIES MAIN START --------------*/
+@media screen and (min-width: 750px) {
+    .grid {
+        grid-template-columns: 
+        minmax(250px, 1fr) 
+        minmax(300px, 3fr); 
+        grid-template-rows: 1fr;
+        grid-auto-flow: dense;
+        grid-template-areas: 
+        "nav main";
+    }
+    nav, aside {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+    }
+    aside {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .grid {
+        grid-template-columns: 
+        minmax(250px, 1fr) 
+        minmax(300px, 3fr) 
+        minmax(250px, 1fr);
+        grid-template-rows: 1fr;
+        grid-auto-flow: dense;
+        grid-template-areas: 
+        "nav main aside";
+    }
+    nav, aside {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+    }
+    aside {
+        display: inline;
+    }
+}
+
+/*-------------- QUERIES MAIN END --------------*/
+
+/*-------------- fORM START  --------------*/
 
 .form {
     min-max: 80vh;
@@ -310,6 +389,10 @@ font-size: 1.5em;
     background-color: #466c70;
 }
 
+/*-------------- FORM END  --------------*/
+
+/*--------------  FOOTER START --------------*/
+
 footer{
     background-color: rgb(243, 231, 229);
     width: 100%;
@@ -319,22 +402,4 @@ footer{
     text-align: end;
 }
 
-.footer__payment{
-    display: inline;
-    flex-wrap: wrap;
-}
-
-
-@media screen and (max-width: 800px) {
-    .grid {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        "nav" 
-        "main" 
-        "aside";
-    }
-    nav, aside {
-        position: static;
-        height: auto;
-    }
-}
+/*-------------- FOOTER  END--------------*/

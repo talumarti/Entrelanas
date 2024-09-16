@@ -1,17 +1,16 @@
 window.onload = async (event) => {
     const idCategory = getQueryParams('id');
+    console.log(idCategory)
     const category = await loadCategory(idCategory);
     const id = document.getElementById('id');
-    const name = document.getElementById('name');
-    const description = document.getElementById('description');
+    const description = document.getElementById('descripcion');
 
-    id.value = category.category_id;
-    name.value = category.category_name;
-    description.value = category.description;
+    id.value = category.categoria_id;
+    description.value = category.descripcion;
 
     categoriesForm.addEventListener('submit', async function (event) {
         event.preventDefault();
-        await updateCategory(idCategory, name.value, description.value);
+        await updateCategory(id.value, description.value);
     });
 
 };
@@ -22,7 +21,7 @@ function getQueryParams(param) {
 
 async function loadCategory(id) {
     try {
-        const response = await fetch(`http://localhost:3000/categories/${id}`, {
+        const response = await fetch(`http://localhost:3000/list/categorias/${id}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -35,14 +34,14 @@ async function loadCategory(id) {
     }
 };
 
-async function updateCategory(id, categoryName, categoryDescription) {
+async function updateCategory(id, categoriaDescripcion) {
     try {
-        const response = await fetch(`http://localhost:3000/updateCategories/${id}`, {
+        const response = await fetch(`http://localhost:3000/updatecategorias/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({categoryName, categoryDescription}),
+            body: JSON.stringify({categoriaDescripcion}),
         });
         const data = await response.json();
             if (response.ok) {

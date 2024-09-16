@@ -67,7 +67,7 @@ async function loadCategories() {
 
 async function deleteCategory(id) {
     try {
-        const response = await fetch(`http://localhost:3000/deleteuserss/${id}`, {
+        const response = await fetch(`http://localhost:3000/deletecategorias/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -84,7 +84,6 @@ async function deleteCategory(id) {
         console.error(error);
         window.alert('Tenemos problemas técnicos.');
     }
-
 };
 
 function modifyCategory (id) {

@@ -8,34 +8,38 @@
 </head>
 <body>
     <header>
-        <h1>Bienvenido al centro de control Entrelanas </h1>
+        <h1>Bienvenido a Entrelanas </h1>
     </header>
     <nav>
         <ul>
             <li><a href="../clients/clients.html">Clientes</a></li>
             <li><a href="../categories/categories.html">Categorias</a></li>
             <li><a href="../products/products.html">Productos</a></li>
-                <li class="close_sesion"><a href="/index.html">Cerrar Sesión</a></li>
+            <li class="close_sesion"><a href="/index.html">Cerrar Sesión</a></li>
         </ul>
     </nav>
     <main>
         <section>
-            <h2>Lista de Categorias</h2>
-            <button type="submit" id="createCategories">Crear Categorias</button>
+            <h2>Lista de Clientes</h2>
+            <button type="submit" id="createClients">Crear Clientes</button>
             <table>
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Descripción</th>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                        <th>Dirección</th>
+                        <th>telefono</th>
+                        <th>email</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
-                <tbody id="categoriesTBody">
+                <tbody id="clientsTBody">
                 </tbody>
             </table>
         </section>
     </main>
     <footer>&copy; 2024 Entrelanas. Todos los derechos reservados.</footer>
-    <script src="../src/categories.js"></script>
+    <script src="../src/clients/clients.js"></script>
 </body>
 </html>

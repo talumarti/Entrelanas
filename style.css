@@ -121,6 +121,14 @@ h2{
     text-align: center;
 }
 
+h1{
+letter-spacing: 30px;
+font-family: cursive;
+font-weight: 900;
+text-align: left;
+padding-right: 700px;
+}
+
 /*-------------- HEADER QUERIES START--------------*/
 
 @container header (min-width: 600px) {
@@ -288,7 +296,7 @@ span{
 /*-------------- MAIN END --------------*/
 
 /*-------------- QUERIES MAIN START --------------*/
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 768px) {
     .grid {
         grid-template-columns: 
         minmax(250px, 1fr) 

@@ -107,10 +107,10 @@ nav, aside{
 
 .header__nav-item {
     list-style: none;
-}
-
-.header__nav-item a {
     color: #444;
+    margin-right: 100px;
+    margin-top: 30px;
+
 }
 
 .header__nav-item a:not(:is(:hover, :active)) {
@@ -188,7 +188,7 @@ ul{
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
 }
     

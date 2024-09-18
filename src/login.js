@@ -10,7 +10,7 @@ window.onload = (event) => {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
         try {
-            const response = await fetch('http://localhost:3000/api/login', {
+            const response = await fetch('https://entrelanas-be.vercel.app/api/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -46,7 +46,7 @@ window.onload = (event) => {
         const newEmail = document.getElementById('email').value;
 
         try {
-            const response = await fetch('http://localhost:3000/user/register', {
+            const response = await fetch('https://entrelanas-be.vercel.app/user/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

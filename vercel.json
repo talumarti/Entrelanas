@@ -1,0 +1,75 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "index.html",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "styles.css",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "img/*",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "categories/*",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "clients/*",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "products/*",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "src/*",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "AcercaDe.css",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "AcercaDe.html",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "Amigurumis.jpeg",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "dashboard.html",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "patrones.html",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "registro.css",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "registro.html",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "tips.css",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "tips.html",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/$1"
+      }
+    ]
+  }

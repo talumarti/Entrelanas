@@ -21,7 +21,7 @@ function getQueryParams(param) {
 
 async function loadCategory(id) {
     try {
-        const response = await fetch(`http://localhost:3000/list/categorias/${id}`, {
+        const response = await fetch(`https://entrelanas-be.vercel.app/list/categorias/${id}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -36,7 +36,7 @@ async function loadCategory(id) {
 
 async function updateCategory(id, categoriaDescripcion) {
     try {
-        const response = await fetch(`http://localhost:3000/updatecategorias/${id}`, {
+        const response = await fetch(`https://entrelanas-be.vercel.app/updatecategorias/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

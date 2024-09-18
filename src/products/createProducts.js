@@ -12,7 +12,7 @@ window.onload = (event) => {
         const productoProveedor_id = document.getElementById('proveedor_id').value;
 
         try {
-            const response = await fetch('http://localhost:3000/createproductos', {
+            const response = await fetch('https://entrelanas-be.vercel.app/createproductos', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

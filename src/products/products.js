@@ -14,7 +14,7 @@ window.onload = (event) => {
 async function loadproducts() {
     try {
         console.log('voy a cargar productos')
-        const response = await fetch('http://localhost:3000/list/productos', {
+        const response = await fetch('https://entrelanas-be.vercel.app/list/productos', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -83,7 +83,7 @@ async function loadproducts() {
 
 async function deleteProduct(id) {
     try {
-        const response = await fetch(`http://localhost:3000/deleteproductos/${id}`, {
+        const response = await fetch(`https://entrelanas-be.vercel.app/deleteproductos/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'

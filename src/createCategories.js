@@ -8,7 +8,7 @@ window.onload = (event) => {
         const categoriaDescripcion = document.getElementById('descripcion').value;
 
         try {
-            const response = await fetch('http://localhost:3000/createcategorias', {
+            const response = await fetch('https://entrelanas-be.vercel.app/createcategorias', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

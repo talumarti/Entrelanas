@@ -29,7 +29,7 @@ function getQueryParams(param) {
 
 async function loadproduct(id) {
     try {
-        const response = await fetch(`http://localhost:3000/list/productos/${id}`, {
+        const response = await fetch(`https://entrelanas-be.vercel.app/list/productos/${id}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -44,7 +44,7 @@ async function loadproduct(id) {
 
 async function updateproduct(id, productoNombre, productoPrecio,  productoCategoria_id, productoObservacion, productoProveedor) {
     try {
-        const response = await fetch(`http://localhost:3000/updateproductos/${id}`, {
+        const response = await fetch(`https://entrelanas-be.vercel.app/updateproductos/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

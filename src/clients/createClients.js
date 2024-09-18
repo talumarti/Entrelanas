@@ -12,7 +12,7 @@ window.onload = (event) => {
         const clienteEmail = document.getElementById('email').value;
 
         try {
-            const response = await fetch('http://localhost:3000/createClientes', {
+            const response = await fetch('https://entrelanas-be.vercel.app/createClientes', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -14,7 +14,7 @@ window.onload = (event) => {
 async function loadClients() {
     try {
         console.log('voy a cargar clientes')
-        const response = await fetch('http://localhost:3000/list/clientes', {
+        const response = await fetch('https://entrelanas-be.vercel.app/list/clientes', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -82,7 +82,7 @@ async function loadClients() {
 
 async function deleteClient(id) {
     try {
-        const response = await fetch(`http://localhost:3000/deleteClientes/${id}`, {
+        const response = await fetch(`https://entrelanas-be.vercel.app/deleteClientes/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'

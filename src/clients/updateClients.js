@@ -29,7 +29,7 @@ function getQueryParams(param) {
 
 async function loadClient(id) {
     try {
-        const response = await fetch(`http://localhost:3000/list/clientes/${id}`, {
+        const response = await fetch(`https://entrelanas-be.vercel.app/list/clientes/${id}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -44,7 +44,7 @@ async function loadClient(id) {
 
 async function updateClient(id, clienteNombres, clienteApellidos, clienteDireccion, clienteTelefono, clienteEmail) {
     try {
-        const response = await fetch(`http://localhost:3000/updateClientes/${id}`, {
+        const response = await fetch(`https://entrelanas-be.vercel.app/updateClientes/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

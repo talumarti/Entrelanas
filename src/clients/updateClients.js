@@ -10,11 +10,11 @@ window.onload = async (event) => {
     const email = document.getElementById('email');
 
     id.value = client.cliente_id;
-    names.value = client.Nombres;
-    surnames.value = client.clienteApellidos;
-    address.value = client.clienteDireccion;
-    phone.value = client.clienteTelefono;
-    email.value = client.clienteEmail;
+    names.value = client.nombres;
+    surnames.value = client.apellidos;
+    address.value = client.direccion;
+    phone.value = client.telefono;
+    email.value = client.email;
 
     clientsForm.addEventListener('submit', async function (event) {
         event.preventDefault();

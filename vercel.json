@@ -30,6 +30,14 @@
         "use": "@vercel/static"
       },
       {
+        "src": "src/clients/*",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "src/products/*",
+        "use": "@vercel/static"
+      },
+      {
         "src": "AcercaDe.css",
         "use": "@vercel/static"
       },
